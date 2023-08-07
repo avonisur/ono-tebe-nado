@@ -45,16 +45,18 @@
 }
 
 /* контакты */
-.header__contacts {
+.contacts {
     display: flex;
     flex-direction: column;
     justify-self: flex-end;
     max-width: 240px;
+
 }
 
-.header__contacts-item{
+.header__contacts{
     font-style: normal;
     text-underline-position: under;
+    justify-self: flex-end;
 }
 
 /* ковер */
@@ -95,16 +97,13 @@
   
 .aligned-text {
     display: block;
-    text-align: left;
 }
   
 .aligned-text-center {
-    display: block;
     text-align: center;
 }
   
 .aligned-text-right {
-    display: block;
     text-align: right;
 }
 
@@ -139,7 +138,7 @@
 .bet-button {
     color: #fff;
     text-align: center;
-    font-family: Raleway;
+    font-family: Raleway, arial;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -148,7 +147,6 @@
     border: 1px solid currentColor;
     background-color: transparent;
     text-decoration: none;
-
     padding: 12px 32px;
     margin-right: 50px;
     cursor: pointer;
@@ -179,12 +177,17 @@
     position: relative;
     padding: 50px 40px;
     justify-content: space-between;
-    flex-direction: column;
-    min-height: 450px;
-    width: 430px; 
+    flex-direction: column; 
     display: flex;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
+    height: 100%; 
+}
+
+.lots__card-list-item{
+    min-height: 450px;
+    width: 430px;
+    flex-grow: 1;
 }
 
 .card__title {
@@ -310,24 +313,20 @@
 /* подвал */
 .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3.6fr 1fr;
     max-width: 1340px;
     margin: auto;
+    margin-bottom: 90px;
 }
-  
+ 
 .footer__contacts {
-    display: flex;
-    flex-direction: column;
-    max-width: 260px;
-}
-  
-.footer__contacts-item {
+    justify-self: start;
     font-style: normal;
     font-size: 18px;
     font-weight: 400;
     line-height: 24.3px;
     text-underline-position: under;
-    text-underline-offset: 0;
+    text-underline-offset: 0;  
 }
   
 .footer__menu {
@@ -364,5 +363,6 @@
 }
   
 .footer__social-icon {
+    width: 48px;
     height: 48px;
 }
